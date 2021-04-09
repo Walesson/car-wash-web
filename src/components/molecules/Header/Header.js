@@ -5,7 +5,7 @@ import {
   Container,
   Right,
   Entrar,
-  Link,
+  MenuLink,
   ListLinks,
   Logo,
 } from './sytles'
@@ -20,9 +20,9 @@ export const Header = () => {
         <Logo src={LogoImg} alt='Logo app' />
         <Right>
           <ListLinks>
-            <Link>Baixa o App</Link>
-            <Link>Sobre nós</Link>
-            <Link>Planos</Link>
+            <MenuLink>Baixa o App</MenuLink>
+            <MenuLink>Sobre nós</MenuLink>
+            <MenuLink>Planos</MenuLink>
           </ListLinks>
           <Entrar onClick={handleEnter}>Entrar</Entrar>
         </Right>

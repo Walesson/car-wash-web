@@ -1,13 +1,13 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { AppTheme, GlobalStyle } from './services/theme'
-import { LandingPage } from './pages'
+import { Login } from './pages'
 
 function App() {
   return (
     <ThemeProvider theme={AppTheme}>
       <GlobalStyle />
-      <LandingPage />
+      <Login />
     </ThemeProvider>
   )
 }

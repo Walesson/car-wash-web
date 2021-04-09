@@ -30,7 +30,7 @@ export const ListLinks = styled.ul`
   margin: 0;
 `
 
-export const Link = styled.li`
+export const MenuLink = styled.li`
   display: inline;
   margin: 20px;
 `
