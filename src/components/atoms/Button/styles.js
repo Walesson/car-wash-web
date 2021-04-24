@@ -23,8 +23,10 @@ export const Wrapper = styled.button`
     }
   }};
   border: 0.13em solid
-    ${({ theme, primary, secondary, success, danger }) => {
+    ${({ theme, primary, secondary, success, danger, noBorder, dark }) => {
       switch (true) {
+        case noBorder:
+          return 'transparent'
         case primary:
           return theme.colors.primary.main
         case secondary:
@@ -33,6 +35,8 @@ export const Wrapper = styled.button`
           return theme.colors.success.main
         case danger:
           return theme.colors.danger.main
+        case dark:
+          return theme.colors.dark.main
         default:
           return theme.colors.primary.main
       }
@@ -42,7 +46,7 @@ export const Wrapper = styled.button`
 `
 
 export const Label = styled(Text)`
-  color: ${({ theme, primary, secondary, success, danger, outline }) => {
+  color: ${({ theme, primary, secondary, success, danger, dark, outline }) => {
     switch (true) {
       case primary && outline:
         return theme.colors.primary.main
@@ -52,6 +56,8 @@ export const Label = styled(Text)`
         return theme.colors.success.main
       case danger && outline:
         return theme.colors.danger.main
+      case dark && outline:
+        return theme.colors.dark.main
       default:
         return theme.colors.light.main
     }

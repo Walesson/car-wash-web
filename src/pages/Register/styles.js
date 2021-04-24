@@ -71,13 +71,10 @@ export const Fields = styled.div`
 
 export const WrapperBanner = styled.section`
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   padding: 10em;
   flex: 1;
   background: url(${({ src }) => src}) no-repeat center;
-  /* background: url('')
-    no-repeat center; */
   background-size: cover;
   position: relative;
 `
@@ -93,8 +90,9 @@ export const Overlay = styled.div`
 
 export const BigTitle = styled(H1)`
   color: ${({ theme }) => theme.colors.secondary.main};
+  max-width: 80%;
   line-height: 1em;
-  text-align: right;
+  text-align: left;
   font-size: 6em;
   z-index: 1;
 `
