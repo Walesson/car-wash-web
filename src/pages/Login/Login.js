@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FiUser, FiLock } from 'react-icons/fi'
 import { useHistory } from 'react-router-dom'
+import Banner from '../../assets/images/banner-01.jpeg'
 import ImgLogo from '../../assets/images/logo-v1.png'
 import { Button, InputField } from '../../components'
 import {
@@ -17,13 +18,14 @@ import {
   BigTitle,
 } from './styles'
 
-const Banner =
-  'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-
 export const Login = () => {
   const history = useHistory()
+  const [user, setUser] = useState('')
+  const [password, setPassword] = useState('')
+
   const handleLogin = (event) => {
     event.preventDefault()
+    console.info('login', user, password)
   }
 
   const goNewAccount = (event) => {
@@ -32,7 +34,7 @@ export const Login = () => {
   }
 
   return (
-    <Wrapper onClick={handleLogin}>
+    <Wrapper>
       <WrapperForm>
         <Container>
           <Logo src={ImgLogo} />
@@ -40,17 +42,30 @@ export const Login = () => {
             <TitlePage>Acessar</TitlePage>
             <Fields>
               <ContentInput>
-                <InputField icon={<FiUser />} placeholder='Usuário' />
+                <InputField
+                  value={user}
+                  icon={<FiUser />}
+                  placeholder='Usuário'
+                  onChange={(event) => {
+                    const { target } = event
+                    setUser(target.value)
+                  }}
+                />
               </ContentInput>
               <ContentInput>
                 <InputField
                   type='password'
+                  value={password}
+                  onChange={(event) => {
+                    const { target } = event
+                    setPassword(target.value)
+                  }}
                   icon={<FiLock />}
                   placeholder='Password'
                 />
               </ContentInput>
             </Fields>
-            <Button label='Acessar' primary />
+            <Button label='Acessar' onClick={handleLogin} primary />
             <br />
             <Button
               label='Cadastrar-se'

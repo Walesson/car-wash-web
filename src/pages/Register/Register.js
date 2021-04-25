@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { FiUser, FiLock, FiMail, FiCompass } from 'react-icons/fi'
+import Banner from '../../assets/images/banner-02.jpeg'
 import { Button, InputField } from '../../components'
 import {
   Wrapper,
@@ -15,14 +16,12 @@ import {
   BigTitle,
 } from './styles'
 
-const Banner =
-  'https://images.unsplash.com/photo-1493238792000-8113da705763?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-
 export const Register = () => {
   const history = useHistory()
   const handleLogin = (event) => {
     event.preventDefault()
   }
+
   return (
     <Wrapper onClick={handleLogin}>
       <WrapperBanner src={Banner}>
