@@ -2,35 +2,34 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
-  width: 1;
-  left: 9px;
-  height: 100vh;
-  min-height: 340px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-`
+  position: absolute;
+  width: 99%;
+  height: 98.1vh;
+  left: 8px;
+  top: 11px;
 
-export const Container = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.466);
 `
-
 export const WrapperSideBar = styled.section`
   display: flex;
+  position: fixed;
+  text-align: justify;
+  width: 18%;
+  left: 8px;
+  height: 99.3vh;
+  top: 0;
   flex-direction: row;
-  justify-content: center;
-  width: 12%;
-  left: 9px;
-  padding: 2em;
-  background-color: #fff;
+  border-right: 2px solid #f8f8f8;
+  flex-wrap: nowrap;
 `
 
-export const WrapperDashboard = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 88%;
-  padding: 2em;
-  background-color: #d3d3d3;
+export const Logo = styled.img`
+  position: absolute;
+  width: 122px;
+  height: 82px;
+  left: 80px;
+  top: 33px;
 `
+
+export const WrapperDashboard = styled.section``
