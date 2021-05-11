@@ -1,15 +1,11 @@
 import React from 'react'
-import { Wrapper, Container, WrapperSideBar, WrapperDashboard } from './styles'
+import ImgLogo from '../../assets/images/logo-v1.png'
+import { Wrapper, Logo, WrapperSideBar } from './styles'
 
 export const Dashboard = () => (
   <Wrapper>
     <WrapperSideBar>
-      <Container>
-        <h1>Side Bar!</h1>
-      </Container>
+      <Logo src={ImgLogo} />
     </WrapperSideBar>
-    <WrapperDashboard>
-      <h1>Dashboard!</h1>
-    </WrapperDashboard>
   </Wrapper>
 )
