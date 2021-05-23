@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { FiUser, FiLock } from 'react-icons/fi'
 import { useHistory } from 'react-router-dom'
+import { CarwashContext } from '../../context'
 import Banner from '../../assets/images/banner-01.jpeg'
 import ImgLogo from '../../assets/images/logo-v1.png'
 import { Button, InputField } from '../../components'
@@ -20,12 +21,16 @@ import {
 
 export const Login = () => {
   const history = useHistory()
+  const { loginDispacth } = useContext(CarwashContext)
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
 
   const handleLogin = (event) => {
     event.preventDefault()
-    console.info('login', user, password)
+    loginDispacth({
+      type: '@setLogin',
+    })
+    history.push('/')
   }
 
   const goNewAccount = (event) => {
