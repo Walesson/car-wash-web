@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { H1 } from '../../components'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -64,4 +65,20 @@ export const Span = styled.img`
   display: inline;
   padding: 0 10px
   align-items: center;
+`
+export const WrapperContent = styled.section`
+  background: #4f4f4f;
+`
+export const BigTitle = styled(H1)`
+  color: #404040;
+  line-height: 1.2em;
+  font-size: 4em;
+  position: absolute;
+  margin-left: 6.5em;
+  margin-top: 1em;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: 500;
+  size: 43, 37px;
 `
