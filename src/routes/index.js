@@ -9,6 +9,7 @@ export const Routes = () => (
       <PrivateRoute exact path='/' Component={Dashboard} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/nova-conta' component={Register} />
+      <Route exact path='/dashboard' component={Dashboard} />
     </Switch>
   </Router>
 )
