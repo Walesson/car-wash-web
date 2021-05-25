@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import {
+  VscGraph,
+  VscListUnordered,
+  VscOutput,
+  VscSettingsGear,
+} from 'react-icons/vsc'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -26,14 +32,14 @@ export const WrapperSideBar = styled.section`
 
 export const Logo = styled.img`
   position: absolute;
-  width: 118px;
-  left: 47px;
+  width: 96px;
+  left: 55px;
   top: 33px;
 `
 
 export const MenuItems = styled.section`
   margin-top: 140px;
-  margin-left: 40px;
+  margin-left: 35px;
   height: 60%;
   width: 100%;
   justify-content: center;
@@ -46,7 +52,6 @@ export const Item = styled.section`
   align-items: center;
 `
 export const ItemLink = styled(Link)`
-  padding: 0 7px;
   color: #c7c7c7;
   display: flex;
   justify-content: start;
@@ -55,13 +60,25 @@ export const ItemLink = styled(Link)`
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 45px;
 `
-export const Span = styled.img`
+export const SpanVisGeral = styled(VscGraph)`
   width: 30px;
   height: 30px;
-  display: inline;
-  padding: 0 10px
-  align-items: center;
+`
+export const SpanAgenda = styled(VscListUnordered)`
+  width: 30px;
+  height: 30px;
+`
+export const SpanRel = styled(VscOutput)`
+  width: 30px;
+  height: 30px;
+`
+export const SpanConfig = styled(VscSettingsGear)`
+  width: 30px;
+  height: 30px;
+`
+export const Text = styled.p`
+  margin-left: 12px;
 `

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { H1 } from '../../components'
+import { H3 } from '../../components'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -69,7 +69,7 @@ export const Span = styled.img`
 export const WrapperContent = styled.section`
   background: #4f4f4f;
 `
-export const BigTitle = styled(H1)`
+export const BigTitle = styled(H3)`
   color: #404040;
   line-height: 1.2em;
   font-size: 4em;
@@ -81,4 +81,31 @@ export const BigTitle = styled(H1)`
   font-style: normal;
   font-weight: 500;
   size: 43, 37px;
+`
+export const DashDailyRatio = styled.span`
+  position: absolute;
+  width: 596.66px;
+  height: 363.12px;
+  left: 278px;
+  top: 183.87px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  /* 1 */
+
+  box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 28px;
+`
+export const DashTittle = styled.p`
+  position: absolute;
+  width: 125px;
+  height: 25px;
+  left: 30px;
+  top: 30px;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20.1118px;
+  line-height: 25px;
 `

@@ -1,10 +1,13 @@
 import React from 'react'
-import { Wrapper, BigTitle } from './styles'
+import { Wrapper, BigTitle, DashDailyRatio, DashTittle } from './styles'
 import { Sidebar } from '../../components'
 
 export const Dashboard = () => (
   <Wrapper>
-    <Sidebar />
     <BigTitle>Visão Geral</BigTitle>
+    <Sidebar />
+    <DashDailyRatio>
+      <DashTittle>Relação Diária</DashTittle>
+    </DashDailyRatio>
   </Wrapper>
 )
